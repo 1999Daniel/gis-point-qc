@@ -1,0 +1,35 @@
+{
+  "normal": {
+    "summary": {
+      "total_rows": 12,
+      "ignored_blank_rows": 0,
+      "issue_count": 0,
+      "affected_rows": 0,
+      "error_count": 0,
+      "warning_count": 0,
+      "by_rule": {},
+      "status": "检查通过"
+    },
+    "sha256": "8e11f931461654908ee899e848e9da47cf44c6798367e2ebab1044b1d51bacc6"
+  },
+  "issues": {
+    "summary": {
+      "total_rows": 12,
+      "ignored_blank_rows": 0,
+      "issue_count": 11,
+      "affected_rows": 10,
+      "error_count": 10,
+      "warning_count": 1,
+      "by_rule": {
+        "REQUIRED": 3,
+        "DUPLICATE_ID": 2,
+        "CATEGORY": 1,
+        "NUMBER": 1,
+        "RANGE": 3,
+        "COORD_SWAP": 1
+      },
+      "status": "发现问题"
+    },
+    "sha256": "8478fef1d33d7a14f4350fc3ecec742787228a7adb11956fe54e947c8c0b147b"
+  }
+}

@@ -1,0 +1,42 @@
+name: 需求交流（只收脱敏描述）
+description: 描述数据检查或轻量自动化需求；本表不是客户数据上传渠道。
+title: "[需求] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本表用于初步界定需求，不代表已经接受委托、报价或承诺交付。
+        只填写脱敏的业务描述。真实文件需要先约定授权与私下交付方式；请勿公开上传客户/学生数据、合同、精确敏感点位、联系方式或密钥。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公开范围确认
+      options:
+        - label: 我确认本需求仅含脱敏描述，不包含真实敏感资料。
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 当前业务问题
+      description: 谁在进行哪一步操作、哪里重复或容易出错；单位及人员名称请匿名。
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: 输入概况
+      description: 文件格式、脱敏字段名称、大致行数、坐标参考系是否已知、资料授权是否明确；不要附原件。
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: 期望输出和验收方式
+      description: 说明希望得到的表格、报告或工具，以及怎样判断结果符合要求。
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: 使用条件与范围
+      description: 操作系统、可否联网、软件限制、大致时间安排；费用和具体条款后续单独协商。

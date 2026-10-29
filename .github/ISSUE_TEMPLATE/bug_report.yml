@@ -1,0 +1,42 @@
+name: 故障反馈（请先脱敏）
+description: 报告无法启动、检查结果不符或报告导出问题。不要上传真实业务原件。
+title: "[故障] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请优先用仓库内人工模拟数据或自行编造的最小样例复现。
+        禁止在公开 Issue 上传客户资料、学生名单、真实敏感点位、合同、账户或密钥。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 资料确认
+      options:
+        - label: 我确认本反馈不含个人、客户、学生、敏感位置或账户信息。
+          required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 运行环境
+      description: 例如 Windows 11、Python 3.12、浏览器名称、项目版本；不要粘贴含用户名或密钥的完整环境变量。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      description: 说明使用哪个模拟样例、选择的坐标系与类别、执行的步骤。
+    validations:
+      required: true
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: 预期与实际结果
+      description: 可提供脱敏的错误文本、规则编号和源表行号；仅在必要时使用人工构造的小片段。
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 影响范围与临时处理
+      description: 是否每次出现、影响哪些操作、是否已有可用处理方法。

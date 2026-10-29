@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="面向测绘与 GIS 数据服务团队的点位表交付前质检工具：导入 CSV / XLSX，检查字段与坐标，导出可复核的问题清单。">
+  <title>点位质检 · 把问题留在入库之前</title>
+  <link rel="stylesheet" href="showcase.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header"><nav class="shell nav" aria-label="主导航"><a href="index.html" class="brand"><span class="logo" aria-hidden="true">P<span>•</span></span><span>点位质检<small>GIS POINT QC</small></span></a><div class="nav-links"><a href="#workflow">检查流程</a><a href="#samples">样例结果</a><a href="#feedback">问题反馈</a></div><span class="release-tag">首版源码预览</span></nav></header>
+  <main id="main">
+    <section class="hero shell">
+      <div class="hero-copy"><p class="eyebrow"><span></span>测绘 / GIS 服务 · 点位表交付前质检</p><h1>把问题，<br>留在入库之前<span>。</span></h1><p class="hero-lead">一张点位表，一份可复核的检查结果。<br>从字段缺失到坐标异常，让数据整理有清单、修改有依据。</p><div class="hero-actions"><a class="button primary" href="sample-report.html">查看问题样例报告 <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/1999Daniel/gis-point-qc/blob/main/README.md#启动">运行说明 <span aria-hidden="true">→</span></a></div><p class="hero-note">静态展示 · 实际检查需本地运行 · 支持 CSV / XLSX</p></div>
+      <div class="hero-preview" aria-label="点位检查结果示意，展示问题类型而非实际统计"><div class="preview-header"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>点位表检查</span><b>模拟数据</b></div><div class="preview-body"><div class="preview-title"><span>导入之后，逐项定位</span><span class="preview-check" aria-hidden="true">✓</span></div><div class="column-labels"><span>检查对象</span><span>检查发现</span></div><div class="preview-row"><span><i class="row-icon" aria-hidden="true">ID</i>点位标识</span><b class="chip error">重复标识</b></div><div class="preview-row"><span><i class="row-icon" aria-hidden="true">↔</i>经度 / 纬度</span><b class="chip error">超出范围</b></div><div class="preview-row"><span><i class="row-icon" aria-hidden="true">≡</i>业务分类</span><b class="chip error">不在允许清单</b></div><div class="preview-footer"><span class="small-check" aria-hidden="true">✓</span><p>定位原始行号<br><strong>附带原因与修改建议</strong></p><span class="document-icon" aria-hidden="true">↓</span></div></div><div class="preview-caption">问题类型示意 · 实际检查结果见下方样例报告</div></div>
+    </section>
+    <div class="capabilities shell"><div><span>01 / 输入</span><strong>CSV · XLSX 点位表</strong></div><div><span>02 / 检查</span><strong>字段 · 标识 · 坐标 · 分类</strong></div><div><span>03 / 输出</span><strong>HTML 报告 · CSV 问题清单</strong></div></div>
+
+    <section class="section shell" id="workflow"><div class="section-heading"><div><p class="eyebrow">A CLEARER WORKFLOW</p><h2>从整理表格，到逐项复核</h2></div><p>面向测绘、AI 数据处理和 GIS 数据服务团队。<br>先处理基础问题，再进入制图、分析与业务使用。</p></div><div class="workflow-grid"><article><span class="number">01</span><h3>准备与声明</h3><p>按模板整理点位表，选择坐标系，设置允许的业务分类，并标记是否为模拟数据。</p><div class="micro-label">单文件 ≤ 5 MiB · 最多 10,000 行</div></article><article><span class="number">02</span><h3>检查与定位</h3><p>按基础规则核查必填项、重复标识、坐标格式与范围、分类值，定位到原始行号和字段。</p><div class="micro-label">每项问题附规则与处理建议</div></article><article><span class="number">03</span><h3>导出与复核</h3><p>保存可独立打开的报告和问题清单，依据建议修改工作副本，再运行检查确认处理结果。</p><div class="micro-label">保留原件 · 结果可追溯</div></article></div></section>
+
+    <section class="samples-section" id="samples"><div class="shell"><div class="section-heading"><div><p class="eyebrow">SAMPLE CHECKS</p><h2>用真实输出，理解检查结果</h2></div><p>两份内置模拟表格，由同一检查程序生成报告。<br>用于验证操作流程，不代表真实外业测量成果。</p></div><div class="samples-grid"><article class="sample-card"><div class="sample-top"><span class="sample-icon good" aria-hidden="true">✓</span><span class="sample-label">模拟样例 A</span></div><h3>正常点位表</h3><p>查看符合当前基础规则的输入与报告，了解检查通过后的记录方式与范围说明。</p><div class="sample-links"><a href="sample-normal-report.html">查看检查报告 <span aria-hidden="true">↗</span></a><a href="sample-normal.csv" download>下载样例 CSV <span aria-hidden="true">↓</span></a></div></article><article class="sample-card"><div class="sample-top"><span class="sample-icon attention" aria-hidden="true">!</span><span class="sample-label">模拟样例 B</span></div><h3>含问题点位表</h3><p>查看预设问题如何定位到行与字段，以及如何使用规则、原因和建议完成逐项处理。</p><div class="sample-links"><a href="sample-report.html">查看检查报告 <span aria-hidden="true">↗</span></a><a href="sample-issues.csv" download>下载样例 CSV <span aria-hidden="true">↓</span></a></div></article></div><p class="sample-footnote">此展示页提供静态样例；上传文件并执行检查，需要按运行说明启动本地服务。</p></div></section>
+
+    <section class="section shell scope-section"><div><p class="eyebrow">A DEFINED SCOPE</p><h2>检查范围清楚，<br>结果才有使用边界。</h2></div><div class="scope-content"><p>首版面向<strong>经纬度点位表的基础属性质检</strong>。支持 WGS84 / CGCS2000 声明；坐标系未声明时保留提示。文件在本地处理，原始材料保持不变。</p><p>点位真实位置、测量精度、来源真实性与业务适用性仍需核实。当前版本不执行坐标转换，也不替代实地检查或测绘成果验收。</p><div class="scope-tags"><span>基础属性检查</span><span>模拟样例验证</span><span>本地运行</span></div></div></section>
+
+    <section class="feedback shell" id="feedback"><div><p class="eyebrow">FEEDBACK THAT CAN BE REPRODUCED</p><h2>让下一次改进，有明确依据</h2><p>发现问题时，请记录输入格式、复现步骤、预期结果和实际结果。<br>涉及真实业务数据时，使用脱敏样例描述问题。</p><details><summary>提出定制需求时，需要哪些信息？</summary><p>请说明业务目标、输入字段与数据量、现有操作步骤、期望的成果格式和验收要求。先用脱敏文字描述，客户原始数据另行约定交付方式。</p></details></div><aside><span class="status-dot" aria-hidden="true"></span><strong>首版源码预览</strong><p>当前仅完成本地模拟样例验证。正式项目许可证待定；可查看源码，并通过 GitHub Issue 提交脱敏反馈与需求。</p><a class="text-link" href="https://github.com/1999Daniel/gis-point-qc/issues/new/choose">提交问题或定制需求 <span aria-hidden="true">→</span></a><p><a href="https://github.com/1999Daniel/gis-point-qc">查看项目源码</a> · <a href="https://github.com/1999Daniel/gis-point-qc/blob/main/LICENSE_STATUS.md">授权状态</a></p></aside></section>
+  </main>
+  <footer class="shell footer"><a class="footer-brand" href="index.html">点位质检 <span>GIS POINT QC</span></a><p>基础检查，有据可查。<span>本地原型 · 模拟样例验证</span></p></footer>
+</body>
+</html>

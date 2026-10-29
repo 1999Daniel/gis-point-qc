@@ -1,0 +1,10 @@
+.venv/
+.runtime/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+private/
+customer-data/
+outputs/
+*.log
+verification/

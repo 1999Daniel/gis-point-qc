@@ -1,0 +1,31 @@
+{
+  "provenance": "全部为人工模拟数据。本清单根据规则逐行人工指定，不由质检实现生成。row 为源表物理行号，表头为第 1 行。",
+  "normal": {
+    "total_rows": 12,
+    "affected_rows": 0,
+    "issue_count": 0,
+    "error_count": 0,
+    "warning_count": 0,
+    "issues": []
+  },
+  "issues": {
+    "total_rows": 12,
+    "affected_rows": 10,
+    "issue_count": 11,
+    "error_count": 10,
+    "warning_count": 1,
+    "issues": [
+      [2, "名称", "REQUIRED", "error"],
+      [3, "编号", "DUPLICATE_ID", "error"],
+      [4, "编号", "DUPLICATE_ID", "error"],
+      [5, "类别", "CATEGORY", "error"],
+      [6, "经度", "NUMBER", "error"],
+      [7, "经度", "RANGE", "error"],
+      [8, "纬度", "RANGE", "error"],
+      [9, "纬度", "RANGE", "error"],
+      [9, "经度/纬度", "COORD_SWAP", "warning"],
+      [10, "经度", "REQUIRED", "error"],
+      [11, "编号", "REQUIRED", "error"]
+    ]
+  }
+}
