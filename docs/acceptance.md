@@ -34,6 +34,12 @@ Excel 错误类型不能冒充正常文本；格式空行不计入非空数据�
 
 随后在本地页面选择样例并导出、回读。保留本次浏览器下载文件时，可运行 scripts/verify_downloads.py 重新核对导出物。
 
+## 线上发布核验（2026-10-29）
+
+首版源码与静态展示已上线。[Windows 自动检查](https://github.com/1999Daniel/gis-point-qc/actions/runs/40876897191)在 GitHub 托管环境完成 47 项测试，全部通过；[Pages 发布](https://github.com/1999Daniel/gis-point-qc/actions/runs/40876921929)成功。以上运行对应首版功能提交 de1e3f93582a57ffc45b09a4345a19c4c25171dd。
+
+独立核对线上 53 个文件的 Git 对象散列与本地提交一致。展示页、两份报告和样例下载正常；问题报告显示 11 条，下载样例与原文件逐字节相同。静态 Pages 不执行上传检查。
+
 ## 未验证或待完成
 
-真实客户数据、外业及空间精度、无 Python 的全新电脑安装、客户独立操作及公网质检服务部署未验证。首版源码预览的 [GitHub 仓库](https://github.com/1999Daniel/gis-point-qc)、[Pages 展示页](https://1999daniel.github.io/gis-point-qc/)和 [Issue 入口](https://github.com/1999Daniel/gis-point-qc/issues/new/choose)需在发布后独立核验线上状态，结果另行记录。静态 Pages 不执行上传检查。正式许可证待用户确定；个人主页文案仍为草案，本次不发布到个人主页仓库。
+真实客户数据、外业及空间精度、无 Python 的全新电脑安装、客户独立操作及公网质检服务部署未验证。[Issue 入口](https://github.com/1999Daniel/gis-point-qc/issues/new/choose)供登录 GitHub 后填写脱敏需求，未代用户发送任何需求。正式许可证待用户确定；个人主页文案仍为草案，本次不发布到个人主页仓库。
